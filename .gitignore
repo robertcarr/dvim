@@ -1,0 +1,8 @@
+*.py[cd]
+*.swp
+*.~??
+*.bak
+*.tmp
+*.pem
+*.key
+
