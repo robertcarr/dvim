@@ -17,7 +17,7 @@ execute pathogen#infect()
 let g:syntastic_check_on_open = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
-"let g:syntastic_sh_checkers = [ 'bashate' ]
+let g:syntastic_sh_checkers = [ 'bashate' ]
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_python_checkers = [ 'flake8', 'pylint', 'pyflakes' ]
 let g:syntastic_python_flake8_post_args = '--ignore=E501'
@@ -30,8 +30,6 @@ set shiftwidth=4
 set nosi
 
 " Used for vim-template plugin
-let g:email = "rob@cloudscaling.com"
-let g:username = "Robert Carr"
 " Don't auto apply templates
 let g:templates_no_autocmd = 1
 
