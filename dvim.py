@@ -7,11 +7,12 @@ import sys
 import os
 import subprocess
 
+
 class Dcmd(object):
+    """ Run docker container with cmd """
     container_temp_dir = '/tmp/dcmd'
     container_name = 'dvim:latest'
 
-    """ Run docker container with cmd """
     def __init__(self, filename, **kwargs):
         self.d_temp_dir = kwargs.get('d_temp_dir', Dcmd.container_temp_dir)
         self.container_name = kwargs.get('container_name', Dcmd.container_name)
@@ -22,8 +23,8 @@ class Dcmd(object):
         """ Launch the container """
         # Create an empty file to keep docker from creating a empty dir.
         if not os.path.exists(self.filename):
-                with open(self.filename, 'a'):
-                     pass
+            with open(self.filename, 'a'):
+                pass
         cmd = ['docker', 'run', '-v', "{}:{}".format(self.filename, self.d_temp_file),
                 '-it', self.container_name, self.d_temp_file]
         subprocess.call(cmd)
@@ -31,5 +32,5 @@ class Dcmd(object):
 
 if __name__ == '__main__':
     if len(sys.argv) > 0:
-            a = Dcmd(filename=sys.argv[1])
-            a._run()
+        a = Dcmd(filename=sys.argv[1])
+        a._run()
