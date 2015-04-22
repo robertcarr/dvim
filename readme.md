@@ -1,10 +1,12 @@
 # dvim
 
-Dockerized VIM with lots of useful configurations and plugins.
+Dockerized VIM.
 
-### Setup
-### Using
+Keep all your VIM plugins and .vimr configurations within a docker container.
 ```
-dvim myfile
 dvim /path/to/myfile
+
+
+###
+### Setup
 
